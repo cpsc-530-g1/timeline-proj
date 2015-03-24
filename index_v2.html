@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>timeline</title>
+<link rel="stylesheet" type="text/css" href="static/css/index.css">
+<link href="static/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.timelinr-0.9.53.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEu5q2crsetTMWGbTAGjhwrKVw0xn5Y60"></script>
+<!-- The following two JS libraries are used to support "date" in IE -->
+<script src="static/js/jquery-ui.custom.js"></script>
+<script src="static/js/modernizr.js"></script>
+<script type="text/javascript" src="static/js/index.js"></script>
+
+</head>
+
+<body>
+
+<div id="main">
+<div id="timeline">
+   <ul id="dates">
+  <!--
+        <li><a href="#2015/01/01" onclick="setmap('2012.png')">2015/01/01</a></li>
+        <li><a href="#2015/01/02" onclick="setmap('2013.png')">2015/01/02</a></li>
+        <li><a href="#2015/01/03" onclick="setmap('2014.png')">2015/01/03</a></li>
+        <li><a href="#2015/01/04" onclick="setmap('2015.png')">2015/01/04</a></li>
+   -->
+
+   </ul>
+   <div id="map-canvas">
+   <ul id="issues">
+   	<li id="2015/01/01"></li>
+		<li id="2015/01/02"></li>
+		<li id="2015/01/03"></li>
+		<li id="2015/01/04"></li>
+   </ul>
+   </div>
+ </div>
+ <form method="post">
+   <div id = "userInputs">
+    <p>
+      Starting Date: <input type="date" name = "startDate" min="2015-01-01"/> 
+      Ending date: <input type="date" name = "endDate"/>
+      <input type = "submit" value="Search" id="search"/>
+    </p>
+   </div>
+ </form>
+</div>
+</body>
+</html>

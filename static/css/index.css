@@ -1,0 +1,76 @@
+html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+
+body {background-color: grey}
+
+#timeline {
+	width: 800px;
+	height: 600px;
+	overflow: hidden;
+	margin-top:10px;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	eft 45px repeat-x;
+}
+
+#dates {
+	width: 700px;
+	height: 60px;overflow: hidden;
+}
+
+#dates li {
+	list-style: none;
+	float: left;
+	width: 100px;
+	height: 50px;
+	font-size: 12px;
+	text-align: center;
+	center bottom no-repeat;
+}
+
+#dates a {
+	line-height: 14px;
+	padding-bottom: 10px;
+}
+
+#dates a:hover{
+	color: red;
+}
+
+#dates .selected {
+	font-size: 16px;
+	color: yellow;
+}
+
+#issues {
+	width: 760px;
+	height: 300px;
+	overflow: hidden;
+}	
+
+#issues li {
+	width: 760px;
+	height: 300px;
+	list-style: none;
+	float: left;
+}
+
+#issues li h1 {
+	color: #ffcc00;
+	font-size: 42px;
+	margin: 10px 0;
+	text-shadow: #000 1px 1px 2px;
+}
+
+#issues li p {
+	font-size: 14px;
+	margin-right: 70px; 
+	margin:10px; font-weight: normal;
+	line-height: 22px;
+}
+
+#userInputs {
+	margin-top: 0;
+	text-align: center;
+}
