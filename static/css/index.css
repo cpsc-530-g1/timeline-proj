@@ -1,6 +1,21 @@
 html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
 
-body {background-color: grey}
+body {
+	background-color: #CAE0E2;
+	
+        background: white url('images/test5.jpg');
+	background-repeat: no-repeat;
+	/*background-size: 2000px 350px;*/
+	font-family: Sans-serif,"Times New Roman", Times, serif;
+	color: #1D3638;
+	
+	
+}
+#map-canvas{
+	background:#EAEAEA;
+	
+}
+
 
 #timeline {
 	width: 800px;
@@ -12,7 +27,14 @@ body {background-color: grey}
 	margin-right: auto;
 	position: relative;
 	eft 45px repeat-x;
+	
+	
+	background:transparent;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+	
 }
+
+
 
 #dates {
 	width: 700px;
@@ -47,6 +69,7 @@ body {background-color: grey}
 	width: 760px;
 	height: 300px;
 	overflow: hidden;
+	
 }	
 
 #issues li {
@@ -73,4 +96,39 @@ body {background-color: grey}
 #userInputs {
 	margin-top: 0;
 	text-align: center;
+	
+}
+
+ /*new added styles*/
+ 
+h3{
+	margin-left: 10px;
+	
+	font-family: arial;
+	}
+
+#descSection{
+	
+	text-align: justify;
+	
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+	margin-top:10px;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	eft 45px repeat-x;
+	
+}
+
+#pageDesc {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+
+    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 20px; /* Firefox */
+    column-gap: 20px;
 }
