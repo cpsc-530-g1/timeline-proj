@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="static/css/jslider.plastic.css" type="text/css">
   <link rel="stylesheet" href="static/css/jslider.round.css" type="text/css">
   <link rel="stylesheet" href="static/css/jslider.round.plastic.css" type="text/css">
+
    
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="static/js/jquery.timelinr-0.9.53.js"></script>
@@ -29,6 +30,8 @@
 <script type="text/javascript" src="static/js/jquery.dependClass-0.1.js"></script>
 <script type="text/javascript" src="static/js/draggable-0.1.js"></script>
 <script type="text/javascript" src="static/js/jquery.slider.js"></script>
+
+
 
 </head>
 
@@ -60,7 +63,6 @@
    </ul>
    </div>
  </div>
- <form method="post">
    <div id = "userInputs">
     <p>
     <div class="layout-slider">
@@ -72,16 +74,16 @@
     </script>
 
     </p>
-    <div class="layout-slider">
+    <div class="layout-slider" style="margin-bottom:20px;">
       Speed: 
       <input id="SliderSingle" type="slider" name="price" value="10" />
        <script type="text/javascript" charset="utf-8">
       jQuery("#SliderSingle").slider({ from: 2, to: 10, step: 2, round: 1, format: { format: '##.0', locale: 'de' }, dimension: '&nbsp;s', skin: "round" });
     </script>
     </div>
-  
+    <button id="play"/>play</button>
+    
    </div>
- </form>
   
 
 <div id="descSection">
