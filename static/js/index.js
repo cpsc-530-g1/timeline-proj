@@ -4,7 +4,7 @@
 
 $( document ).ready(function(){
   initialize();
-  showLatest();
+  //showLatest();
 });
 
 
@@ -56,7 +56,7 @@ function showLatest(){
   
 }
 
-/*
+
 $(function(){
     $().timelinr({
 		autoPlay: 'true',
@@ -64,7 +64,7 @@ $(function(){
 		startAt: 1
 	})
 });
-*/
+
 
 /*
 ** Function to support "date" in IE
