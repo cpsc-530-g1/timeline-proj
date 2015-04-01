@@ -16,7 +16,7 @@
 
    
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="static/js/jquery.timelinr-0.9.53.js"></script>
+<script type="text/javascript" src="static/js/jquery.timelinr-0.9.54.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEu5q2crsetTMWGbTAGjhwrKVw0xn5Y60"></script>
 <!-- The following two JS libraries are used to support "date" in IE -->
 <script src="static/js/jquery-ui.custom.js"></script>
@@ -76,9 +76,9 @@
     </p>
     <div class="layout-slider" style="margin-bottom:20px;">
       Speed: 
-      <input id="SliderSingle" type="slider" name="price" value="10" />
+      <input id="SliderSingle" type="slider" name="price" value="2.5" />
        <script type="text/javascript" charset="utf-8">
-      jQuery("#SliderSingle").slider({ from: 2, to: 10, step: 2, round: 1, format: { format: '##.0', locale: 'de' }, dimension: '&nbsp;s', skin: "round" });
+      jQuery("#SliderSingle").slider({ from: 0.5, to: 3, step: 0.5, round: 1, format: { format: '##0.0', locale: 'de' }, dimension: '&nbsp;s', skin: "round" });
     </script>
     </div>
     <button id="play"/>play</button>
