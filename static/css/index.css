@@ -224,7 +224,7 @@ h3{
 .layout-slider-settings { font-size: 12px; padding-bottom: 10px; }
 .layout-slider-settings pre { font-family: Courier; }
 
-#play{
+#play, #stop{
 	width: 6em;
 	height: 2em;
 }
