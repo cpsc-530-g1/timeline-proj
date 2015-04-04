@@ -19,13 +19,8 @@ def get_random_file():
 
 
 def main():
-<<<<<<< HEAD
     current_date = date(2015, 1, 1)
     end_date = date(2015, 5, 1)
-=======
-    current_date = date(2015,1,1)
-    end_date = date(2015,4,30)
->>>>>>> 4b1dd78e40a43b1ae0bf4fce9cb229d87d166814
     one_day = timedelta(days=1)
     while current_date != end_date:
         generate(current_date)
