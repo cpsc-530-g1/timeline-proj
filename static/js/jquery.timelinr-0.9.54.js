@@ -9,6 +9,7 @@ http://www.opensource.org/licenses/mit-license.php
 instructions: http://www.csslab.cl/2011/08/18/jquery-timelinr/
 ---------------------------------- */
 
+
 jQuery.fn.timelinr = function(options){
 	// default plugin settings
 	settings = jQuery.extend({
@@ -246,7 +247,7 @@ jQuery.fn.timelinr = function(options){
 		$(settings.datesDiv+' li').eq(settings.startAt-1).find('a').trigger('click');
 		// autoPlay, added since 0.9.4
 		if(settings.autoPlay == 'true') { 
-			setInterval("autoPlay()", settings.autoPlayPause);
+			window.autoPlayFrame = setInterval("autoPlay()", settings.autoPlayPause);
 		}
 	});
 };
@@ -266,5 +267,7 @@ function autoPlay(){
 		} else {
 			currentDate.parent().prev().find('a').trigger('click');
 		}
+	} else if(settings.autoPlayDirection == 'stop'){
+			clearInterval(window.autoPlayFrame);
 	}
 }

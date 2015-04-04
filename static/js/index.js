@@ -39,10 +39,7 @@ $( document ).ready(function(){
     alert("stop");
      $(function(){
         $().timelinr({
-        autoPlay: false,
-        autoPlayDirection: 'forward',
-        startAt: 1,
-        autoPlayPause:2500
+        autoPlayDirection: 'stop',
       })
     });
 
