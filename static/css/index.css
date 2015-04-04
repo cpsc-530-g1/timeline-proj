@@ -8,7 +8,7 @@ body {
 	/*background-size: 2000px 350px;*/
 	font-family: Sans-serif,"Times New Roman", Times, serif;
 	color: #1D3638;
-	
+	background-size: 100% auto;
 	
 }
 #map-canvas{

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>timeline</title>
 <link rel="stylesheet" type="text/css" href="static/css/index.css">
+<link rel="stylesheet" type="text/css" href="static/css/iThing.css">
  <!--<link rel="stylesheet" type="text/css" href="static/css/main.css">  -->
 <link href="static/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
 
@@ -30,6 +31,7 @@
 <script type="text/javascript" src="static/js/jquery.dependClass-0.1.js"></script>
 <script type="text/javascript" src="static/js/draggable-0.1.js"></script>
 <script type="text/javascript" src="static/js/jquery.slider.js"></script>
+<script type="text/javascript" src="static/js/jQDateRangeSlider-min.js"></script>
 
 
 
@@ -43,35 +45,27 @@
    
      
 <div id="timeline">
-   <h3>NO2 Pollution - Metro Vancouver BC</h3>
+   <h3 >NO2 Pollution - Metro Vancouver BC</h3>
+   <h4 id = "subtitle"></h4>
    <ul id="dates">
-    
-  
-        <li><a href="#2015/01/01" onclick="setmap('http://127.0.0.1:8080/data/no2/2015_01_01/data.png')">2015/01/01</a></li>
+        <!-- <li><a href="#2015/01/01" onclick="setmap('http://127.0.0.1:8080/data/no2/2015_01_01/data.png')">2015/01/01</a></li>
         <li><a href="#2015/01/02" onclick="setmap('http://127.0.0.1:8080/data/no2/2015_01_02/data.png')">2015/01/02</a></li>
         <li><a href="#2015/01/03" onclick="setmap('http://127.0.0.1:8080/data/no2/2015_01_03/data.png')">2015/01/03</a></li>
-        <li><a href="#2015/01/04" onclick="setmap('http://127.0.0.1:8080/data/no2/2015_01_04/data.png')">2015/01/04</a></li>
-   
-
+        <li><a href="#2015/01/04" onclick="setmap('http://127.0.0.1:8080/data/no2/2015_01_04/data.png')">2015/01/04</a></li> -->
    </ul>
    <div id="map-canvas">
    <ul id="issues">
-   	<li id="2015/01/01"></li>
+   	<!-- li id="2015/01/01"></li>
 		<li id="2015/01/02"></li>
 		<li id="2015/01/03"></li>
-		<li id="2015/01/04"></li>
+		<li id="2015/01/04"></li> -->
    </ul>
    </div>
  </div>
    <div id = "userInputs">
     <p>
-    <div class="layout-slider">
-           Time: 
-    <input id="Slider4" type="slider" name="area" value="2002;2006" />
-    </div>
-    <script type="text/javascript" charset="utf-8">
-      jQuery("#Slider4").slider({ from: 2000, to: 2015, heterogeneity: ['50/2008', '75/2012'], scale: [2000, '|', 2004, '|', '2008', '|', 2012, '|', 2015], limits: false, step: 1, dimension: '', skin: "blue", callback: function( value ){ console.dir( this ); } });
-    </script>
+    Time:
+    <div id="slider" class="layout-slider"></div>
 
     </p>
     <div class="layout-slider" style="margin-bottom:20px;">

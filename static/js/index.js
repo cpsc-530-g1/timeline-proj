@@ -16,25 +16,6 @@ $( document ).ready(function(){
     $().timelinr();
   });
 
-  $("#play").click(function(){
-        alert("The button play is clicked");
-        var speed = $("#SliderSingle").slider("value");
-        alert("The speed is "+ 1000*speed);
-        var year = $("#Slider4").slider("value");
-        alert("starting year is "+ year.substring(0,4));
-        alert("ending year is "+ year.substring(5,9));
-
-        $(function(){
-            $().timelinr({
-            autoPlay: 'true',
-            autoPlayDirection: 'forward',
-            startAt: 1,
-            autoPlayPause:1000*speed
-          })
-        });
-        alert("pause");
-  });
-
   $("#stop").click(function(){
     alert("stop");
      $(function(){
@@ -44,6 +25,27 @@ $( document ).ready(function(){
     });
 
   });
+
+  $("#slider").dateRangeSlider();
+
+  $('#play').click(function(){
+    alert("date selected");
+    var speed = $("#SliderSingle").slider("value");
+    alert("The speed is "+ 1000*speed);
+    //$("#slider").dateRangeSlider("values", new Date(2015, 0, 1), new Date(2015, 3, 31));
+    var dateMax = $("#slider").dateRangeSlider("max");
+    var dateMin = $("#slider").dateRangeSlider("min");
+    alert("min: "+dateMin.toString() + " " + "max: "+dateMax.toString());
+
+    $(function(){
+        $().timelinr({
+        autoPlay: 'true',
+        autoPlayDirection: 'forward',
+        startAt: 1,
+        autoPlayPause:1000*speed
+      })
+    });
+  })
 
 });
 
