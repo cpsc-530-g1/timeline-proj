@@ -122,7 +122,7 @@ $( document ).ready(function(){
 */
     // Generate Data 
    
-    while(dateMin <= dateMax){
+/*    while(dateMin <= dateMax){
 
 
         //var imageAPI = "http://127.0.0.1:8080/no2?adate=2015_01_01";
@@ -132,7 +132,7 @@ $( document ).ready(function(){
         ))
 
         
-    }
+    }*/
 
 
 
@@ -186,13 +186,13 @@ function showLatest(){
 /*
 ** Function to support "date" in IE
 */
-Modernizr.load({
+/*Modernizr.load({
     test: Modernizr.inputtypes.date,
     nope: "js/jquery-ui.custom.js",
     callback: function() {
       $("input[type=date]").datepicker();
     }
-});
+});*/
 
 /*
 ** Function for map
