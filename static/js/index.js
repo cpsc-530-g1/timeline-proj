@@ -31,7 +31,7 @@ $( document ).ready(function(){
   $("#stop").click(function(){
     $("#dates").empty();
     $("#subtitle").empty();
-    alert("stop");
+    //alert("stop");
      $(function(){
         $().timelinr({
         autoPlayDirection: 'stop',
@@ -77,7 +77,7 @@ $( document ).ready(function(){
     (dateMaxMonth<10 ? '0' : '') + dateMaxMonth + '_' + dateMaxDay;
     var imageAPI = "http://127.0.0.1:8080/no2?start_date="+time_query_Min+"&end_date="+time_query_Max;
 
-    alert(imageAPI);
+    //alert(imageAPI);
     $("#dates").empty();
 
 
