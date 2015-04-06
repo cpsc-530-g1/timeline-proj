@@ -1,11 +1,9 @@
 html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
 
 body {
-	background-color: #CAE0E2;
 	
         background: white url('images/test5.jpg');
 	background-repeat: repeat-x;
-	/*background-size: 2000px 350px;*/
 	font-family: Sans-serif,"Times New Roman", Times, serif;
 	color: #1D3638;
 	background-size: 100% auto;
@@ -60,7 +58,7 @@ h1,h2,h4,h5,h6 {
 }
 
 	#timeline {
-		width: 800px;
+		width: 75%;
 		height: 450px;
 		overflow: hidden;
 		margin: 100px auto;
@@ -203,7 +201,7 @@ h3{
 	
 	text-align: justify;
 	
-	width: 800px;
+	width: 75%;
 	height: auto;
 	overflow: hidden;
 	margin-top:10px;
