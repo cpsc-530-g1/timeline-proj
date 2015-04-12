@@ -33,7 +33,35 @@ def serve_data(filepath):
     return static_file(filepath, root=os.getcwd())
 
 
-@route("/no2")
+@route('/<data_set>')
+def get_ds(data_set):
+    if not os.path.exists(data_set):
+        return encode_json('invalid')
+
+    query = request.query
+
+    if query.adate:
+        adate = parse_date(query.adate)
+        if adate is None:
+            return encode_json('invalid')
+        else:
+            return encode_json(get_data_set(data_set, adate))
+    elif query.start_date and query.end_date:
+        start_date = parse_date(query.start_date)
+        end_date = parse_date(query.end_date)
+        if start_date and end_date:
+            result = []
+            a_day = datetime.timedelta(days=1)
+            while start_date <= end_date:
+                result.append((date_2_str(start_date), get_data_set(data_set, start_date)))
+                start_date += a_day
+            return encode_json(result)
+        else:
+            return encode_json('invalid')
+    else:
+        return encode_json(get_data_set(data_set, datetime.date.today()))
+
+# @route("/no2")
 def no2():
     query = request.query
 
