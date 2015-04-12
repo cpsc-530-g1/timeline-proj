@@ -2,6 +2,8 @@
 ** Function for timeline 
 */
 
+var search_data = "no2";
+
 $( document ).ready(function(){
 
   var date = new Date();
@@ -42,6 +44,10 @@ $( document ).ready(function(){
 
   });
 
+  $('#search').click(function(){
+    search_data = $('#new').val();
+  });
+
 
 
   $('#play').click(function(){
@@ -75,7 +81,7 @@ $( document ).ready(function(){
 
     var time_query_Max = dateMaxYear + '_' +
     (dateMaxMonth<10 ? '0' : '') + dateMaxMonth + '_' + dateMaxDay;
-    var imageAPI = "http://127.0.0.1:8080/no2?start_date="+time_query_Min+"&end_date="+time_query_Max;
+    var imageAPI = "http://127.0.0.1:8080/"+search_data+"?start_date="+time_query_Min+"&end_date="+time_query_Max;
 
     //alert(imageAPI);
     $("#dates").empty();
@@ -161,7 +167,7 @@ function showLatest(){
     (month<10 ? '0' : '') + month + '_' +
     (day<10 ? '0' : '') + day;
 
-  var imageAPI = "http://127.0.0.1:8080/no2?adate="+time_query;
+  var imageAPI = "http://127.0.0.1:8080/"+search_data+"?adate="+time_query;
   //var imageAPI = "http://127.0.0.1:8080/no2?adate=2015_01_01";
 
 

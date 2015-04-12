@@ -65,19 +65,23 @@
  </div>
    <div id = "userInputs">
     <p>
-    Time:
+    <span id="slider_text" style="color: gray;
+  font-weight: bold;">Time:</span>
     <div id="slider" class="layout-slider"></div>
 
     </p>
     <div class="layout-slider" style="margin-bottom:20px;">
-      Speed: 
+      <span id = "slider_text" style="color: gray;
+  font-weight: bold;">Speed:</span> 
       <input id="SliderSingle" type="slider" name="price" value="2.5" />
        <script type="text/javascript" charset="utf-8">
       jQuery("#SliderSingle").slider({ from: 0.5, to: 3, step: 0.5, round: 1, format: { format: '##0.0', locale: 'de' }, dimension: '&nbsp;s', skin: "round" });
     </script>
     </div>
+    <div style="margin:40px;">
     <button id="play"/>play</button>
     <button id="stop"/>stop</button>
+    </div>
     
    </div>
   
@@ -88,6 +92,10 @@
    From the time human beings began cooking food over smoky fires, people have been exposed to air pollutants. Before the industrial revolution, however, air pollution occurred on a relatively small scale. With the widespread adoption of the internal combustion engine after 1850, the scale of air pollution changed. 
    Industrial facilities and vehicles of all kinds began burning large quantities of coal, petroleum, and other fossil fuels. More smokestacks and more vehicle exhaust pipes emitted vaster quantities of a complex mix of vaporous, liquid, and solid particles. Air quality worsened over ever-larger areas. People became ill and infants, children, and adults died.
 </div>
+</div>
+
+<div>
+<P style="text-align:center; margin-bottom；20px;">Please search other pollutant here: <input type="text" id = "new"></input><button id="search" style="margin-left:10px;">search</button></p>
 </div>
 </div>
 

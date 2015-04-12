@@ -2,7 +2,7 @@ html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
 
 body {
 	
-        background: white url('images/test5.jpg');
+    background: white url('images/test5.jpg');
 	background-repeat: repeat-x;
 	font-family: Sans-serif,"Times New Roman", Times, serif;
 	color: #1D3638;
@@ -228,7 +228,8 @@ h3{
 .layout-slider-settings { font-size: 12px; padding-bottom: 10px; }
 .layout-slider-settings pre { font-family: Courier; }
 
-#play, #stop{
+#play,#stop,#search{
 	width: 6em;
 	height: 2em;
 }
+
