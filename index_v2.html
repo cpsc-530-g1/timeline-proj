@@ -54,6 +54,32 @@
         <li><a href="#2015/01/03" onclick="setmap('http://127.0.0.1:8080/data/no2/2015_01_03/data.png')">2015/01/03</a></li>
         <li><a href="#2015/01/04" onclick="setmap('http://127.0.0.1:8080/data/no2/2015_01_04/data.png')">2015/01/04</a></li> -->
    </ul>
+   <div id = "userInputs">
+
+    <p>
+    <span id="slider_text" style="color: gray;
+  font-weight: bold;">Time:</span>
+    <div id="slider" class="layout-slider"></div>
+
+    </p>
+    <span id = "slider_text" style="color: gray; font-weight: bold;">Speed:</span> 
+    <div class="layout-slider" style="margin-bottom:20px;margin-top:20px;">
+      
+      <input id="SliderSingle" type="slider" name="price" value="2.5"/>
+       <script type="text/javascript" charset="utf-8">
+      jQuery("#SliderSingle").slider({ from: 0.5, to: 3, step: 0.5, round: 1, format: { format: '##0.0', locale: 'de' }, dimension: '&nbsp;s', skin: "round" });
+    </script>
+    </div>
+
+    <div style=" text-align:center">
+    <button id="play"/>play</button>
+    <button id="stop"/>stop</button>
+    </div>
+	<div class="clock">
+		<div id="Date" style="margin-top:20px;"></div>
+	</div>
+    
+   </div>
    <div id="map-canvas">
    <ul id="issues">
    	<!-- li id="2015/01/01"></li>
@@ -63,37 +89,27 @@
    </ul>
    </div>
  </div>
-   <div id = "userInputs">
-    <p>
-    <span id="slider_text" style="color: gray;
-  font-weight: bold;">Time:</span>
-    <div id="slider" class="layout-slider"></div>
+   
+<!--   	<a href="#" title="Play video" class="play"></a> -->
 
-    </p>
-    <div class="layout-slider" style="margin-bottom:20px;">
-      <span id = "slider_text" style="color: gray;
-  font-weight: bold;">Speed:</span> 
-      <input id="SliderSingle" type="slider" name="price" value="2.5" />
-       <script type="text/javascript" charset="utf-8">
-      jQuery("#SliderSingle").slider({ from: 0.5, to: 3, step: 0.5, round: 1, format: { format: '##0.0', locale: 'de' }, dimension: '&nbsp;s', skin: "round" });
-    </script>
-    </div>
-    <div style="margin:40px;">
-    <button id="play"/>play</button>
-    <button id="stop"/>stop</button>
-    </div>
-    
-   </div>
-  
 
 <div id="descSection">
-  <p style="padding-bottom:20px;"><strong>Background information</strong> </p>
+<p style="padding-bottom:20px;"><strong>Background information</strong> </p>
   <div id="pageDesc">
-   "Nitrogen dioxide (NO2) is part of a group of gaseous air pollutants produced as a result of road traffic and other fossil fuel combustion processes. In urban outdoor air, the presence of NO2 is mainly due to traffic. Nitric oxide (NO), which is emitted by motor vehicles or other combustion processes, combines with oxygen in the atmosphere, producing NO2. Indoor NO2 is produced mainly by unvented heaters and gas stoves." - <a href="http://www.greenfacts.org/en/index.htm" style="color:blue;"> GreenFacts</a> <br> 
+    "Nitrogen dioxide (NO2) is part of a group of gaseous air pollutants produced as a result of road traffic and other fossil fuel combustion processes. In urban outdoor air, the presence of NO2 is mainly due to traffic. Nitric oxide (NO), which is emitted by motor vehicles or other combustion processes, combines with oxygen in the atmosphere, producing NO2. Indoor NO2 is produced mainly by unvented heaters and gas stoves." - <a href="http://www.greenfacts.org/en/index.htm" style="color:blue;"> GreenFacts</a>
+    <br/>
    This tool will provide user with a better idea about how pollution increased over last couple of weeks. Using this data, we can determine which areas are most affected within a given time period.
 </div>
 </div>
-
+<div id="container_button">
+	<div id="hole">
+		<div id="button">
+			<div id="triangle"></div>
+			<div id="lighter_triangle"></div>
+			<div id="darker_triangle"></div>
+		</div>
+	</div>
+</div>
 <div>
 <P style="text-align:center; margin-bottom；20px;">Please search other pollutant here: <input type="text" id = "new"></input><button id="search" style="margin-left:10px;">search</button></p>
 </div>
