@@ -2,6 +2,8 @@
 ** Function for timeline 
 */
 
+var search_data = "no2";
+
 $( document ).ready(function(){
 
   var date = new Date();
@@ -42,10 +44,14 @@ $( document ).ready(function(){
 
   });
 
+  $('#search').click(function(){
+    search_data = $('#new').val();
+  });
+
 
 
   $('#play').click(function(){
-    $("#subtitle").empty();
+   
     //alert("date selected");
     var speed = $("#SliderSingle").slider("value");
     //alert("The speed is "+ 1000*speed);
@@ -75,11 +81,8 @@ $( document ).ready(function(){
 
     var time_query_Max = dateMaxYear + '_' +
     (dateMaxMonth<10 ? '0' : '') + dateMaxMonth + '_' + dateMaxDay;
-    var imageAPI = "http://127.0.0.1:8080/no2?start_date="+time_query_Min+"&end_date="+time_query_Max;
-
-    //alert(imageAPI);
+    var imageAPI = "http://127.0.0.1:8080/"+search_data+"?start_date="+time_query_Min+"&end_date="+time_query_Max;
     $("#dates").empty();
-
 
     $.ajax({
       type: "GET",
@@ -87,6 +90,11 @@ $( document ).ready(function(){
       //contentType: "application/json; charset:utf-8",
       dataType: "json",
       success: function (data) {
+        if(data.result == "invalid"){
+          alert("The data doesn't exist in our database");
+        }
+        else {
+        $("#subtitle").empty();
         for(var i = 0; i < data.result.length; i++) {
           var datainfo = data.result[i].toString().split(",");
           var dateFormats = datainfo[0].split("_");
@@ -109,6 +117,7 @@ $( document ).ready(function(){
             autoPlayPause:1000*speed
           })
         });
+        }
 
       },
       error: function (fs) {
@@ -161,7 +170,7 @@ function showLatest(){
     (month<10 ? '0' : '') + month + '_' +
     (day<10 ? '0' : '') + day;
 
-  var imageAPI = "http://127.0.0.1:8080/no2?adate="+time_query;
+  var imageAPI = "http://127.0.0.1:8080/"+search_data+"?adate="+time_query;
   //var imageAPI = "http://127.0.0.1:8080/no2?adate=2015_01_01";
 
 
@@ -204,24 +213,13 @@ var showed = false;
 
 function initialize() {
   var vancouver = new google.maps.LatLng(49.1,-123.0);
-  //var chicago = new google.maps.LatLng(41.875696,-87.624207);
+
   var mapOptions = {
     zoom: 9,
     center: vancouver
   }
 
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-  //setmap('test.png');
-
-  /*
-  var ctaLayer = new google.maps.KmlLayer({
-    //url: 'http://gmaps-samples.googlecode.com/svn/trunk/ggeoxml/cta.kml'
-    //url: 'http://localhost:8000/NO_len_en.kmz'
-    url: 'http://ws.mss.icics.ubc.ca/~jcchen25/NO_len_en.kmz'
-  });
-  ctaLayer.setMap(map);
-  */
 }
 
 function setmap(str) {
@@ -238,12 +236,13 @@ function setmap(str) {
 
   showed = true;
 
-
   overlay = new google.maps.GroundOverlay(
       str,
       imageBounds, overlayOpts);
-  overlay.setMap(null);
   overlay.setMap(map);
+
+
+
 }
 
 function myfunc() {
