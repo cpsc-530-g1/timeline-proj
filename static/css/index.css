@@ -1,4 +1,4 @@
-html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+/* html, body, #map-canvas { height: 100%; margin: 0; padding: 0;} */
 
 body {
 	
@@ -11,12 +11,15 @@ body {
 }
 #map-canvas{
 	background:#EAEAEA;
-	
+	height: 100%; 
+	width : 600px;
+	margin: 0; padding: 0;
+	float : right;
 }
 
 
 * {
-	margin: 0;
+	margin:0;
 	padding: 0;
 }
 
@@ -185,8 +188,9 @@ h1,h2,h4,h5,h6 {
 
 #userInputs {
 	margin-top: 0;
-	text-align: center;
-	
+	float : left;	
+	width : 350px;
+	height : 450px;
 }
 
  /*new added styles*/
@@ -224,12 +228,69 @@ h3{
 }
 
 .layout { padding: 50px; font-family: Georgia, serif; }
-.layout-slider { margin-bottom: 60px; width: 50%; margin-right: auto; margin-left: auto;}
+.layout-slider { margin-bottom: 60px; margin-right: auto; margin-left: auto;}
 .layout-slider-settings { font-size: 12px; padding-bottom: 10px; }
 .layout-slider-settings pre { font-family: Courier; }
 
 #play,#stop,#search{
 	width: 6em;
 	height: 2em;
+    margin: 0 auto;
+	}
+
+
+
+.play-button {
+    height: 40px;
+    width: 65px;    
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    position: relative;
 }
 
+.play-button:hover {
+    background-color: rgba(0, 173, 239, 0.9);
+}
+
+.play-button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10.5px;
+    left: 24px;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 9.5px 0 9.5px 17px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+}
+
+
+
+/* If you want you can use font-face */
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('BebasNeue-webfont.eot');
+    src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('BebasNeue-webfont.woff') format('woff'),
+         url('BebasNeue-webfont.ttf') format('truetype'),
+         url('BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.clock {
+    margin: 0 auto;
+    padding: 30px;
+    color: black;
+}
+
+#Date {
+    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: center;
+	

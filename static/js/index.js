@@ -106,7 +106,7 @@ $( document ).ready(function(){
         }
 
         $("#dates li").css({"list-style":"none","float":"left","width":"100px","height":"50px","font-size":"14px","text-align":"center","background":"url('../images/biggerdot.png') center bottom no-repeat"});
-        $("#dates a").css({"line-height":"45px;","padding-bottom":"10px","color":"#ffffcc","text-decoration":"none","-webkit-transition":"0.5s","-moz-transition":"0.5s","-o-transition":"0.5s","-ms-transition":"0.5s","transition":"0.5s"});
+        $("#dates a").css({"line-height":"45px;","padding-bottom":"10px","color":"#ffffcc","text-decoration":"none","-webkit-transition":"0.5s","-moz-transition":"0.5s","-o-transition":"0.5s","-ms-transition":"0.5s","transition":"0.5s","display":"none"});
         $("#dates .selected").css("font-size","18px");
 
         $(function(){
@@ -171,6 +171,7 @@ function showLatest(){
     (day<10 ? '0' : '') + day;
 
   var imageAPI = "http://127.0.0.1:8080/"+search_data+"?adate="+time_query;
+  populateDate(time_query);
   //var imageAPI = "http://127.0.0.1:8080/no2?adate=2015_01_01";
 
 
@@ -223,6 +224,10 @@ function initialize() {
 }
 
 function setmap(str) {
+  //alert(str);
+  strs = str.split('/');
+  //alert(strs[5]);
+  populateDate(strs[5]);
   var imageBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(48.963588, -123.364349),
       new google.maps.LatLng(49.411317, -122.317993));
@@ -253,6 +258,21 @@ function myfunc() {
 function myremove() {
   showed = false;
   overlay.setMap(null);
+
+}
+
+function populateDate(str) {
+  //alert(str);
+  var s = str.split('_');
+  var dateObj = new Date(Number(s[0]),Number(s[1]) -1 ,Number(s[2]));
+  var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+  var dayNames= ["Sun","Mon","Tue","Wed","Thur","Fri","Sat"]
+  
+  // Create a newDate() object
+  // Extract the current date from Date object
+  //newDate.setDate(dateObj.getDate());
+  // Output the day, date, month and year   
+  $('#Date').html(dayNames[dateObj.getDay()] + " " + dateObj.getDate() + ' ' + monthNames[dateObj.getMonth()] + ' ' + dateObj.getFullYear());
 
 }
 
