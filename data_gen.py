@@ -4,7 +4,7 @@ from datetime import timedelta
 import random
 from PIL import Image
 
-DATASET = 'no2'
+DATASET = 'new_data'
 
 fpath = os.path.dirname(os.path.realpath(__file__))
 dpath = os.path.join(fpath, 'data')
@@ -37,8 +37,8 @@ def generate(d):
     print dest_dir + ' generated'
 
 
-raw1 = Image.open("data/raw_data/no2.png")
-raw2 = Image.open("data/raw_data/no_top.png")
+raw1 = Image.open("data/raw_data/new_color.png")
+raw2 = Image.open("data/raw_data/new_color.png")
 
 alpha = 0
 
