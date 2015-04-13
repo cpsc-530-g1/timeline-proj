@@ -66,7 +66,7 @@ h1,h2,h4,h5,h6 {
 		overflow: hidden;
 		margin: 100px auto;
 		position: relative;
-		background: url('../images/dot.gif') left 50px repeat-x;
+	/*	background: url('../images/dot.gif') left 50px repeat-x;*/
 	}
 		#dates {
 			width: 800px;
@@ -228,7 +228,7 @@ h3{
 }
 
 .layout { padding: 50px; font-family: Georgia, serif; }
-.layout-slider { margin-bottom: 60px; margin-right: auto; margin-left: auto;}
+.layout-slider { margin-bottom: 60px; margin-right: auto; margin-left: 20px;}
 .layout-slider-settings { font-size: 12px; padding-bottom: 10px; }
 .layout-slider-settings pre { font-family: Courier; }
 

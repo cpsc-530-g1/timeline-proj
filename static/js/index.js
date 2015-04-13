@@ -159,11 +159,11 @@ function showLatest(){
     (month<10 ? '0' : '') + month + '/' +
     (day<10 ? '0' : '') + day;
 
-  jQuery('<div/>', {
+  /*jQuery('<div/>', {
     id: 'heading',
     style: 'text-align:center',
     text: time,
-  }).appendTo('#subtitle');
+  }).appendTo('#subtitle');*/
 
   // Ask for the latest data 
   var time_query = date.getFullYear() + '_' +
